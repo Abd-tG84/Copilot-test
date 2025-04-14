@@ -1,5 +1,5 @@
 import unittest
-from add import add_numbers
+from add import add_numbers  # add_numbers関数をインポート
 
 class TestAddNumbers(unittest.TestCase):
     def test_add_integers(self):
