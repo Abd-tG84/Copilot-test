@@ -1,9 +1,6 @@
-# 2つの数値を足し算する関数
-def add_numbers(a, b):
-    return a + b
+# add.py
 
-# 実行例
-num1 = 5
-num2 = 3
-result = add_numbers(num1, num2)
-print(f"{num1} + {num2} = {result}")
+def add_numbers(a, b):
+    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+        raise ValueError("Both arguments must be numbers")
+    return a + b
