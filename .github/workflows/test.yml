@@ -24,9 +24,9 @@ jobs:
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
-        pip install pytest
-
-    - name: Run tests
+        pip install pytest pytest-cov
+  
+    - name: Run tests with coverage
       env:
         PYTHONPATH: ${{ github.workspace }}
-      run: pytest
+      run: pytest --cov=calculator --cov-report=term-missing
