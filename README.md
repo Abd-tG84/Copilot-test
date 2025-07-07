@@ -1,4 +1,4 @@
-# Calculator Project
+# Calculator & Dice Project Project
 
 このリポジトリは、Pythonで実装されたシンプルな計算機能およびサイコロ機能のクラスと、それらの単体テストを含みます。
 
@@ -14,13 +14,14 @@ calculator/         # 計算機能・サイコロ機能の実装
 tests/              # 単体テスト
     test_calculator.py
     test_dice.py
-requirements.txt    # 依存パッケージ（空、またはpytest等を追加）
+.gitignore          # Git管理対象外ファイルの指定
+requirements.txt    # 依存パッケージ（pytest等）
 README.md           # このファイル
 LICENSE             # ライセンス
 ```
 
 
-## VSCodeでGitHub CodeSpacesを使う方法
+## VSCodeでCodeSpacesを使う方法
 
 1. VSCodeのコマンドパレット（`F1` または `Ctrl+Shift+P`）で「CodeSpaces: 新しいCodeSpaceを作成」を選択し、リポジトリを指定して起動します。
 2. CodeSpacesが起動したら、ターミナルで以下のコマンドを順に実行してください。
