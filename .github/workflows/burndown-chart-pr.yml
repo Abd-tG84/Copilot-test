@@ -1,0 +1,32 @@
+name: Burndown Chart Auto PR
+on:
+  schedule:
+    - cron: '0 0 * * *' # 毎日0時に実行
+  workflow_dispatch:
+jobs:
+  burndown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate Burndown Chart
+        uses: tomerfi/github-burndown-chart-action@v1
+        with:
+          github_token: ${{ secrets.REPO_TOKEN }}
+          milestone: 'Sprint 1'
+          labels: 'backlog-item'
+          output_path: ./burndown.png
+      - name: Commit burndown chart
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git checkout -b auto/burndown-update || git checkout auto/burndown-update
+          git add ./burndown.png
+          git commit -m 'Update burndown chart' || echo 'No changes'
+          git push -u origin auto/burndown-update
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: 'Update burndown chart'
+          branch: auto/burndown-update
+          title: '自動バーンダウンチャート更新'
+          body: '自動生成されたバーンダウンチャートの更新です。'
