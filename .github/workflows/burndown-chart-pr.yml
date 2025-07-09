@@ -1,7 +1,7 @@
 name: Burndown Chart Auto PR
 on:
   schedule:
-    - cron: '*/5 * * * *' # 5分おきに実行
+    - cron: '0 0 * * *' # 毎日0時に実行
   workflow_dispatch:
 jobs:
   burndown:
