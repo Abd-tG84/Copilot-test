@@ -16,6 +16,9 @@
 - [copilot-sprint-retrospective.md](./copilot-sprint-retrospective.md)
   - スプリントレトロスペクティブ（振りかえり）でのKPTやアクションアイテム自動整理、ふりかえりサマリ作成の方法を紹介
 
+- [copilot-backlog-refinement.md](./copilot-backlog-refinement.md)
+  - バックログリファインメント（リファインメント）でのCopilot活用方法、要件分解・見積もり・不明点抽出などの自動化例をまとめています。
+
 ## 使い方
 
 - 各ドキュメントを参照し、Copilotとgh CLIを活用したスクラム運用の自動化・効率化にご活用ください。
