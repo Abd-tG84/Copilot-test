@@ -1,4 +1,3 @@
-
 # Calculator & Dice Project Project
 
 このリポジトリは、Pythonで実装されたシンプルな計算機能およびサイコロ機能のクラスと、それらの単体テストを含みます。
